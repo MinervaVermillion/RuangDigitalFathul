@@ -13,28 +13,24 @@ body {
     background-color: #dfe3ee;
     color: #333;
     padding: 0 20px;
+    transition: background-color .4s ease, color .4s ease;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #dfe3ee;
-    padding: 10px 20px;
-    box-shadow: -8px -8px 15px #ffffff, 8px 8px 15px #a3b1c6;
-    margin:16px auto;
-    border-radius: 10px;
-    max-width: 900px;
-}
+
 
 ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    padding: 0;
-    border-radius: 8px;
+    gap: 8px;
     box-shadow: inset -4px -4px 8px #ffffff, 
                 inset 4px 4px 8px #c8d0e7;
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 999px;
+    list-style: none;
+    align-items: center;
+
 }
 
 a {
@@ -96,11 +92,14 @@ body.dark #burger-btn {
     }
 
     ul.open {
-        position: static;
-        flex-direction: column;
-        width: 100%;   
-        padding: 10px 0;
-
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        background: #dfe3ee;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: -8px -8px 16px #ffffff, 8px 8px 16px #a3b1c6;
     }
 
     ul li a {
@@ -115,7 +114,11 @@ body.dark #burger-btn {
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
-    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
     padding: 5px 10px;
     box-shadow: -8px -8px 15px #ffffff, 8px 8px 15px #a3b1c6;
 }
@@ -130,70 +133,55 @@ body.dark #theme-btn i{
 
 .wrapper {
     position: relative;
-
     display: flex;
     justify-content: space-between;
+    
     align-items: center;
     max-width: 900px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 999px;
     background: #dfe3ee;
     box-shadow: -12px -12px 24px #ffffff,
                  12px 12px 24px #a3b1c6;
-    isolation: isolate;
-}
-
-.wrapper::before, .wrapper::after {
-    content: '';
-    position: absolute;
-    border-radius: 999px;
-    z-index: -1;
-    transition: .4s;
-}
-
-.wrapper::before {
-   position-anchor: --hover;
-   top: anchor(top);
-   left: anchor(left);
-   width: anchor(width);
-   height: anchor(height);
-   background: #dfe3ee;
-   box-shadow: inset -5px -5px 10px #ffffff,
-               inset 5px 5px 10px #a3b1c6;
-
-}
-
-ul {
-    display: flex;
-    gap: 8px;
-    padding: 8px;
-    border-radius: 999px;
-    list-style: none;
+    transition: background-color .4s ease, box-shadow .4s ease;
+    
 }
 ul a{
     display: block;
-    padding: 12px 20;
+    padding: 12px 20px;
     border-radius: 999px;
     text-decoration: none;
     color: #4b5563;
     transition: .3s;
 }
 
-ul a:hover {
-    anchor-name: --hover;
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo {
+   font-weight: bold;
 }
 
-ul a:active {
-   anchor-name: --active;}
+ul a.active {
+   background:linear-gradient(
+    145deg, #ffffff, #cad7e5
+   );
+   box-shadow: -4px -4px 8px #a3b1c6, 
+               4px 4px 8px #ffffff;
+}
 
-.wrapper::after {
-    position-anchor: --active;
-    top: anchor(top);
-    left: anchor(left);
-    width: anchor(width);
-    height: anchor(height);
-    background: linear-gradient(145deg, #ffffff, #cad7e5);
-    box-shadow:  -4px -4px 8px #ffffff,
-                 4px 4px 8px #a3b1c6;
+body.dark ul a.active {
+    background:linear-gradient(
+        145deg, #292e40, #13161e
+    );
+    box-shadow: inset -4px -4px 8px #292e40, 
+                inset 4px 4px 8px #13161e;
+    color:#d1d9f0;
+}
+
+a, button, ul, #theme-btn, #burger-btn {
+    transition: all .4s ease;
 }
