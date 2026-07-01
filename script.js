@@ -58,11 +58,11 @@ const observer = new IntersectionObserver(function(entries) {
         }
     });
 }, { 
-    threshold: 0.05, 
+    threshold: 0.05,
     rootMargin: "0px 0px -10% 0px"
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
+const hiddenElements = document.querySelectorAll('.about-section.hidden');
 hiddenElements.forEach(function(el) {
     observer.observe(el);
 });
