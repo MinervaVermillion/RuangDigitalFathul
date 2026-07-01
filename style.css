@@ -189,9 +189,10 @@ ul a.active {
     font-size: calc(1rem + 0.2vw);
     color: #555;
     max-width: 620px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 20px auto;
     line-height: 1.6;
     transition: color .4s ease; 
+    
 }
 .hero-buttons {
     display: flex;
@@ -458,8 +459,7 @@ body.dark .image-container {
     }
 
     .about-text p {
-        text-align: justify;
-        margin-bottom: 16px;
+        text-align: left;
     }
 
     .image-container {
@@ -468,10 +468,5 @@ body.dark .image-container {
     }
     .about-image{
         order: -1;
-    }
-
-    .hero-content p {
-        font-size: calc(1.5rem + 2vw);
-        margin: 0 auto 20px auto;
     }
 }
