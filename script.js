@@ -1,4 +1,3 @@
-
 function updateThemeIcon(isDark) {
     const icon = themeBtn.querySelector('i');
     if (isDark) {
@@ -20,20 +19,14 @@ if (savedTheme === 'dark') {
     updateThemeIcon(false);
 }
 
-
 themeBtn.addEventListener('click', function() {
     document.body.classList.toggle('dark');
-    
-  
     const isDark = document.body.classList.contains('dark');
-    
-   
     if (isDark) {
         localStorage.setItem('theme', 'dark');
     } else {
         localStorage.setItem('theme', 'light');
     }
-    
     updateThemeIcon(isDark);
 });
 
@@ -54,3 +47,22 @@ navLinks.forEach(link => {
     }
 });
 
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('hidden');
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+            entry.target.classList.add('hidden');
+        }
+    });
+}, { 
+    threshold: 0.05, 
+    rootMargin: "0px 0px -10% 0px"
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach(function(el) {
+    observer.observe(el);
+});
