@@ -54,22 +54,3 @@ navLinks.forEach(link => {
     }
 });
 
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove('hidden');
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-            entry.target.classList.add('hidden');
-        }
-    });
-}, { 
-    threshold: 0.1, 
-    rootMargin: "-20px 0px -20px 0px" 
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach(function(el) {
-    observer.observe(el);
-});

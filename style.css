@@ -134,7 +134,7 @@ ul a.active {
 
 .hero-section {
     max-width: 900px;
-    margin: 40px auto 120px auto;
+    margin: 40px auto;
     padding: 20px 10px;
     text-align: center;
     animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
@@ -303,12 +303,15 @@ body.dark .btn-secondary:hover {
 
 .about-section {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 10px auto;
     padding: 40px;
     border-radius: 24px;
     background: #dfe3ee;
     box-shadow: -8px -8px 16px #ffffff, 8px 8px 16px #a3b1c6;
     transition: background-color .4s ease, box-shadow .4s ease;
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.7s; 
+    opacity: 0;
 }
 
 .about-content {
@@ -367,17 +370,6 @@ body.dark .about-text p { color: #a3b1c6; }
 body.dark .image-container {
     background: #1e2230;
     box-shadow: -6px -6px 12px #13161e, 6px 6px 12px #292e40;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 @media (max-width: 680px) {
@@ -454,7 +446,6 @@ body.dark .image-container {
         width: 140px;
         height: 140px;
     }
-
     .about-image{
         order: -1;
     }
