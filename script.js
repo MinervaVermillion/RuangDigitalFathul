@@ -50,8 +50,15 @@ navLinks.forEach(link => {
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-            entry.target.classList.remove('hidden');
-            entry.target.classList.add('visible');
+            if (entry.target.classList.contains('about-section') && window.innerWidth <= 680) {
+                setTimeout(() => {
+                    entry.target.classList.remove('hidden');
+                    entry.target.classList.add('visible');
+                }, 1200); 
+            } else {
+                entry.target.classList.remove('hidden');
+                entry.target.classList.add('visible');
+            }
             observer.unobserve(entry.target);
         }
     });
