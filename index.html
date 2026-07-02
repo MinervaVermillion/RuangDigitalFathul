@@ -12,52 +12,141 @@
 </head>
 <body>
     <header>
-      <nav class="wrapper">
-        <a class="logo" href="index.html">Ruang Digital Fathul</a>
-        
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="credentials.html">Credentials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        
-        <div class="nav-actions">
-          <button id="burger-btn"><i class="fa-solid fa-bars"></i></button>
-          <button id="theme-btn"><i class="fa-regular fa-moon"></i></button>
-        </div>
-      </nav>
+        <nav class="wrapper">
+            <a class="logo" href="index.html">Ruang Digital Fathul</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="burger-btn"><i class="fa-solid fa-bars"></i></button>
+                <button id="theme-btn"><i class="fa-regular fa-moon"></i></button>
+            </div>
+        </nav>
     </header>
     <main>
-      <section class="hero-section">
-        <div class="hero-content">
-          <span class="badge">Selamat Datang</span>
-          <h1>Halo! Saya <span class="highlight">Fathul</span>, senang kamu mampir.</h1>
-          <p>Selamat datang di Ruang Digital saya!</p>
-          <p>Tempat saya mengubah rasa penasaran menjadi <strong>ide, eksperimen, dan karya digital.</strong></p>
-          <div class="hero-buttons">
-            <a href="projects.html" class="btn-primary">Lihat Proyek</a>
-            <a href="contact.html" class="btn-secondary">Hubungi Saya</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section hidden">
-        <div class="about-content">
-          <div class="about-text">
-            <h2>Tentang Saya</h2>
-            <p>Saya adalah seorang kreator digital yang mengeksplorasi perpaduan antara <strong>teknologi, desain, dan kreativitas</strong>. saya percaya bahwa setiap ide memiliki potensi untuk berkembang menjadi sesuatu yang nyata.</p>
-            <p>Saat ini saya terus mengeksplorasi berbagai bidang seperti <strong>pemrograman, data science, desain grafis, dan game development</strong> untuk menciptakan karya yang tidak hanya berfungsi, tetapi juga memiliki pengalaman cerita.</p>
-            <p><strong>Ruang Digital Fathul</strong> adalah tempat saya mendokumentasikan perjalanan tersebut, mulai dari eksperimen kecil hingga proyek yang terus berkembang.</p>
-          </div>
-          <div class="about-image">
-            <div class="image-container">
-            <img src="https://iili.io/C74OeDb.md.jpg" alt="C74OeDb.md.jpg" border="0">
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="badge">Selamat Datang</span>
+                <h1>Halo! Saya <span class="highlight">Fathul</span>, senang kamu mampir.</h1>
+                <p>Selamat datang di Ruang Digital saya!</p>
+                <p>Tempat saya mengubah rasa penasaran menjadi <strong>ide, eksperimen, dan karya digital.</strong></p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn-primary">Lihat Proyek</a>
+                    <a href="contact.html" class="btn-secondary">Hubungi Saya</a>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="about-section hidden">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Saya</h2>
+                    <p>Saya adalah seorang kreator digital yang mengeksplorasi perpaduan antara <strong>teknologi, desain, dan kreativitas</strong>. saya percaya bahwa setiap ide memiliki potensi untuk berkembang menjadi sesuatu yang nyata.</p>
+                    <p>Saat ini saya terus mengeksplorasi berbagai bidang seperti <strong>pemrograman, data science, desain grafis, dan game development</strong> untuk menciptakan karya yang tidak hanya berfungsi, tetapi juga memiliki pengalaman cerita.</p>
+                    <p><strong>Ruang Digital Fathul</strong> adalah tempat saya mendokumentasikan perjalanan tersebut, mulai dari eksperimen kecil hingga proyek yang terus berkembang.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://iili.io/C74OeDb.md.jpg" alt="C74OeDb.md.jpg" border="0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section hidden">
+            <div class="projects-header">
+                <h2>Proyek Pilihan</h2>
+                <p>Beberapa karya yang sedang atau sudah saya kerjakan.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-thumbnail placeholder-thumb">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Game Dev</span>
+                            <span class="project-status status-wip">Dalam Pengerjaan</span>
+                        </div>
+                        <h3>Teleported</h3>
+                        <p><strong>Teleported</strong> adalah game action-adventure story-driven yang dikembangkan oleh <strong>Nirantara Interactive</strong>. Game ini mengajak pemain menjelajahi dunia misterius dengan sistem pertarungan berbasis emosi, dipadukan dengan eksplorasi, teka-teki, dan narasi yang berfokus pada perjalanan karakter. Saat ini, Teleported masih berada dalam tahap pengembangan, dengan proses yang mencakup perancangan mekanik gameplay, penulisan cerita, pembuatan aset, hingga implementasi sistem menggunakan Godot Engine 3. Proyek ini menjadi langkah awal Nirantara Interactive dalam menghadirkan pengalaman bermain yang memadukan aksi, emosi, dan cerita yang mendalam.</p>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="projects.html" class="btn-card">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-thumbnail placeholder-thumb">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Web Dev</span>
+                            <span class="project-status status-wip">Dalam Pengerjaan</span>
+                        </div>
+                        <h3>Ruang Digital Fathul</h3>
+                        <p><strong>Ruang Digital Fathul</strong> adalah ruang digital yang mendokumentasikan proyek, eksperimen, dan karya kreatif di dunia teknologi.</p>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="projects.html" class="btn-card">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-thumbnail placeholder-thumb">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Segera Hadir</span>
+                            <span class="project-status status-idea">Ide</span>
+                        </div>
+                        <h3>Proyek Berikutnya</h3>
+                        <p>Ide berikutnya sedang dibangun. Detail akan segera diumumkan.</p>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="projects.html" class="btn-card">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <a href="projects.html" class="btn-primary">Lihat Semua Proyek <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="contact-section hidden">
+            <div class="contact-inner">
+                <span class="badge">Kontak</span>
+                <h2>Mari Terhubung</h2>
+                <p>Punya pertanyaan, ide kolaborasi, atau sekadar ingin menyapa? Pintu selalu terbuka.</p>
+                <div class="contact-socials">
+                    <a href="https://github.com/MinervaVermillion" target="_blank" class="social-btn">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/6288218930237" target="_blank" class="social-btn">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://instagram.com/fathulfrancois?igsh=bm1hYWwyeXJ0a3Zn" target="_blank" class="social-btn">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+                <a href="contact.html" class="btn-primary">Halaman Kontak Lengkap <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
-</body> 
+</body>
 </html>

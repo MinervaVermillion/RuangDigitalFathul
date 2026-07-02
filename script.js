@@ -52,9 +52,7 @@ const observer = new IntersectionObserver(function(entries) {
         if (entry.isIntersecting) {
             entry.target.classList.remove('hidden');
             entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-            entry.target.classList.add('hidden');
+            observer.unobserve(entry.target);
         }
     });
 }, { 
@@ -62,7 +60,7 @@ const observer = new IntersectionObserver(function(entries) {
     rootMargin: "0px 0px -10% 0px"
 });
 
-const hiddenElements = document.querySelectorAll('.about-section.hidden');
+const hiddenElements = document.querySelectorAll('.about-section.hidden, .projects-section.hidden, .contact-section.hidden, .page-header.hidden, .featured-section.hidden, .other-projects.hidden, .contact-page-section.hidden');
 hiddenElements.forEach(function(el) {
     observer.observe(el);
 });

@@ -3,35 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ruang Digital Fathul - Temukan berbagai proyek yang telah saya kerjakan, mulai dari pengembangan web hingga aplikasi mobile.">
-    <meta name="keywords" content="Portofolio,Ruang Digital, Fathul, Proyek, Pengembangan Web, Aplikasi Mobile, Bahasa Pemrograman, Teknologi">
+    <meta name="description" content="Proyek-proyek Fathul — dari game development hingga web dan eksperimen digital lainnya.">
+    <meta name="keywords" content="Portfolio, Proyek, Game Dev, Web Dev, Fathul">
     <meta name="author" content="Fathul">
-    <title>Ruang Digital Fathul</title>
+    <title>Proyek — Ruang Digital Fathul</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-      <nav class="wrapper">
-        <a class="logo" href="index.html">Ruang Digital Fathul</a>
-        
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="credentials.html">Credentials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        
-        <div class="nav-actions">
-          <button id="burger-btn"><i class="fa-solid fa-bars"></i></button>
-          <button id="theme-btn"><i class="fa-regular fa-moon"></i></button>
-        </div>
-      </nav>
+        <nav class="wrapper">
+            <a class="logo" href="index.html">Ruang Digital Fathul</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="burger-btn"><i class="fa-solid fa-bars"></i></button>
+                <button id="theme-btn"><i class="fa-regular fa-moon"></i></button>
+            </div>
+        </nav>
     </header>
+
     <main>
-      <h1 id="nyoba">ini harusnya responsif disegala jenis ukuran viewport</h1>
+        <section class="page-header hidden">
+            <span class="badge">Karya & Eksperimen</span>
+            <h1>Semua <span class="highlight">Proyek</span></h1>
+            <p>Berbagai proyek yang mencerminkan proses belajar dan berkarya. Mulai dari yang serius sampai yang sekadar iseng.</p>
+        </section>
+
+        <section class="featured-section hidden">
+            <div class="featured-label">
+                <i class="fa-solid fa-star"></i> Proyek Utama
+            </div>
+            <div class="featured-card">
+                <div class="featured-thumbnail placeholder-thumb-lg">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="featured-body">
+                    <div class="project-meta">
+                        <span class="project-tag">Game Dev</span>
+                        <span class="project-tag">Godot</span>
+                        <span class="project-status status-wip">Dalam Pengerjaan</span>
+                    </div>
+                    <h2>Teleported</h2>
+                    <p><strong>Teleported</strong> adalah game action-adventure story-driven yang dikembangkan oleh <strong>Nirantara Interactive</strong>. Game ini mengajak pemain menjelajahi dunia misterius dengan sistem pertarungan berbasis emosi, dipadukan dengan eksplorasi, teka-teki, dan narasi yang berfokus pada perjalanan karakter. Saat ini, Teleported masih berada dalam tahap pengembangan, dengan proses yang mencakup perancangan mekanik gameplay, penulisan cerita, pembuatan aset, hingga implementasi sistem menggunakan Godot Engine 3. Proyek ini menjadi langkah awal Nirantara Interactive dalam menghadirkan pengalaman bermain yang memadukan aksi, emosi, dan cerita yang mendalam.</p>
+                    <p>Proyek ini dibangun ulang dari awal setelah akumulasi bug menjadi tidak terkendali. Sistem inti yang sudah selesai meliputi gerakan pemain, death zone, dan scene-switching antar dunia.</p>
+                    <div class="featured-tech">
+                        <span class="tech-chip"><i class="fa-solid fa-code"></i> GDScript</span>
+                        <span class="tech-chip"><i class="fa-solid fa-cube"></i> Godot 3</span>
+                        <span class="tech-chip"><i class="fa-solid fa-person-running"></i> 2D Platformer</span>
+                    </div>
+                    <div class="featured-actions">
+                        <a href="#" class="btn-primary"><i class="fa-brands fa-github"></i> Lihat di GitHub</a>
+                        <a href="#" class="btn-secondary"><i class="fa-solid fa-play"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="other-projects hidden">
+            <h2 class="section-title">Proyek Lainnya</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-thumbnail placeholder-thumb">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Web Dev</span>
+                            <span class="project-status status-wip">Dalam Pengerjaan</span>
+                        </div>
+                        <h3>Ruang Digital Fathul</h3>
+                        <p><strong>Ruang Digital Fathul</strong> adalah ruang digital yang mendokumentasikan proyek, eksperimen, dan karya kreatif di dunia teknologi.</p>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/MinervaVermillion/RuangDigitalFathul" class="btn-card">GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-thumbnail placeholder-thumb">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Segera Hadir</span>
+                            <span class="project-status status-idea">Ide</span>
+                        </div>
+                        <h3>Proyek Berikutnya</h3>
+                        <p>Ide berikutnya sedang dibangun. Detail akan segera diumumkan.</p>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="btn-card">Segera Hadir <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
-
-</body> 
+</body>
 </html>
