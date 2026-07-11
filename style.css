@@ -962,6 +962,405 @@ body.dark .social-btn:hover {
     box-shadow: -2px -2px 5px #13161e, 2px 2px 5px #292e40;
 }
 
+.certificates-section {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    padding: 0 10px;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.certificates-section.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.certificates-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certificates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.certificates-header h2 {
+    font-size: calc(1.5rem + 1vw);
+    color: #3a3f47;
+    margin-bottom: 8px;
+    transition: color .4s ease;
+}
+
+.certificates-header p {
+    font-size: calc(0.95rem + 0.1vw);
+    color: #555;
+    transition: color .4s ease;
+}
+
+.cert-slider-wrap {
+    position: relative;
+    padding: 0 44px;
+}
+
+.cert-slider-fade {
+    position: absolute;
+    top: 0;
+    bottom: 16px;
+    width: 44px;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.cert-slider-fade.left {
+    left: 44px;
+    background: linear-gradient(to right, #dfe3ee, transparent);
+}
+
+.cert-slider-fade.right {
+    right: 44px;
+    background: linear-gradient(to left, #dfe3ee, transparent);
+}
+
+.cert-slider-fade.is-hidden {
+    opacity: 0;
+}
+
+body.dark .cert-slider-fade.left {
+    background: linear-gradient(to right, #1e2230, transparent);
+}
+
+body.dark .cert-slider-fade.right {
+    background: linear-gradient(to left, #1e2230, transparent);
+}
+
+.cert-slider-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #dfe3ee;
+    box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #a3b1c6;
+    color: #4b5563;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: box-shadow .3s ease, transform .2s ease, background-color .4s ease, color .4s ease, opacity .3s ease;
+}
+
+.cert-slider-nav:hover {
+    box-shadow: -2px -2px 5px #ffffff, 2px 2px 5px #a3b1c6;
+}
+
+.cert-slider-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.cert-slider-nav.prev {
+    left: 0;
+}
+
+.cert-slider-nav.next {
+    right: 0;
+}
+
+.cert-slider-nav:disabled {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+body.dark .cert-slider-nav {
+    background: #1e2230;
+    box-shadow: -5px -5px 10px #13161e, 5px 5px 10px #292e40;
+    color: #d1d9f0;
+}
+
+body.dark .cert-slider-nav:hover {
+    box-shadow: -2px -2px 5px #13161e, 2px 2px 5px #292e40;
+}
+
+@media (hover: none) {
+    .cert-slider-nav,
+    .cert-slider-fade {
+        display: none;
+    }
+
+    .cert-slider-wrap {
+        padding: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .cert-slider-nav,
+    .cert-slider-fade {
+        display: none;
+    }
+
+    .cert-slider-wrap {
+        padding: 0;
+    }
+}
+
+.cert-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 6px 6px 16px 6px;
+    scrollbar-width: none;
+}
+
+.cert-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.cert-card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 240px;
+    border-radius: 20px;
+    background: #dfe3ee;
+    box-shadow: -6px -6px 12px #ffffff, 6px 6px 12px #a3b1c6;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: background-color .4s ease, box-shadow .4s ease, transform .3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: -8px -8px 16px #ffffff, 8px 8px 16px #a3b1c6;
+}
+
+.cert-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dfe3ee;
+    box-shadow: inset -4px -4px 8px #ffffff, inset 4px 4px 8px #c8d0e7;
+    font-size: 2.2rem;
+    color: #a3b1c6;
+    transition: background-color .4s ease, box-shadow .4s ease, color .4s ease;
+    overflow: hidden;
+}
+
+.cert-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cert-card-body {
+    padding: 14px 16px 16px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cert-issuer {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #7a8aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: color .4s ease;
+}
+
+.cert-tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #556080;
+    box-shadow: inset -2px -2px 4px #ffffff, inset 2px 2px 4px #a3b1c6;
+    transition: color .4s ease, box-shadow .4s ease;
+    width: fit-content;
+    margin-bottom: 2px;
+}
+
+body.dark .cert-tag {
+    color: #7a8aaa;
+    box-shadow: inset -2px -2px 4px #13161e, inset 2px 2px 4px #292e40;
+}
+
+.cert-card-body h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #3a3f47;
+    line-height: 1.35;
+    transition: color .4s ease;
+}
+
+.cert-date {
+    font-size: 0.75rem;
+    color: #7a8aaa;
+    transition: color .4s ease;
+}
+
+.certificates-cta {
+    text-align: center;
+    margin-top: 8px;
+}
+
+body.dark .certificates-header h2 {
+    color: #a3b1c6;
+}
+
+body.dark .certificates-header p {
+    color: #7a8aaa;
+}
+
+body.dark .cert-card {
+    background-color: #1e2230;
+    box-shadow: -6px -6px 12px #13161e, 6px 6px 12px #292e40;
+}
+
+body.dark .cert-card:hover {
+    box-shadow: -8px -8px 16px #13161e, 8px 8px 16px #292e40;
+}
+
+body.dark .cert-thumb {
+    background: #1e2230;
+    box-shadow: inset -4px -4px 8px #13161e, inset 4px 4px 8px #292e40;
+    color: #4a5470;
+}
+
+body.dark .cert-issuer,
+body.dark .cert-date {
+    color: #7a8aaa;
+}
+
+body.dark .cert-card-body h3 {
+    color: #c8d0e7;
+}
+
+.credentials-page-section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 0 10px;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.credentials-page-section.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.credentials-page-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.credentials-group {
+    margin-bottom: 40px;
+}
+
+.credentials-group-title {
+    font-size: calc(1.1rem + 0.4vw);
+    color: #3a3f47;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color .4s ease;
+}
+
+.credentials-group-title i {
+    color: #c4a55a;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.drive-banner {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    padding: 32px;
+    border-radius: 24px;
+    background: #dfe3ee;
+    box-shadow: -8px -8px 16px #ffffff, 8px 8px 16px #a3b1c6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    transition: background-color .4s ease, box-shadow .4s ease;
+}
+
+.drive-banner-text h3 {
+    font-size: 1.1rem;
+    color: #3a3f47;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color .4s ease;
+}
+
+.drive-banner-text h3 i {
+    color: #5570a8;
+}
+
+.drive-banner-text p {
+    font-size: 0.88rem;
+    color: #555;
+    transition: color .4s ease;
+}
+
+body.dark .credentials-group-title {
+    color: #a3b1c6;
+}
+
+body.dark .drive-banner {
+    background-color: #1e2230;
+    box-shadow: -8px -8px 15px #13161e, 8px 8px 15px #292e40;
+}
+
+body.dark .drive-banner-text h3 {
+    color: #c8d0e7;
+}
+
+body.dark .drive-banner-text p {
+    color: #7a8aaa;
+}
+
+@media (max-width: 680px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+        width: 200px;
+    }
+
+    .drive-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+}
+
 .contact-page-section {
     max-width: 900px;
     margin: 0 auto 80px auto;
