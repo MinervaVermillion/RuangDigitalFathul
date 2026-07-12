@@ -488,7 +488,8 @@ body.dark .image-container {
 }
 
 .project-thumbnail img,
-.placeholder-thumb-lg img {
+.placeholder-thumb-lg img,
+.project-thumbnail-gif {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1596,9 +1597,10 @@ body.dark .contact-info-value {
         width: 180px;
         flex-direction: column;
         align-items: stretch;
-        background-color: rgba(223, 227, 238, 0.96);
+        background-color: rgba(223, 227, 238, 0.75);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
         padding: 12px;
         border-radius: 20px;
         box-shadow: -6px -6px 12px #ffffff, 6px 6px 12px #a3b1c6;
@@ -1610,7 +1612,8 @@ body.dark .contact-info-value {
     }
 
     body.dark ul {
-        background-color: rgba(30, 34, 48, 0.96);
+        background-color: rgba(30, 34, 48, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow: -6px -6px 12px #13161e, 6px 6px 12px #292e40;
     }
 
