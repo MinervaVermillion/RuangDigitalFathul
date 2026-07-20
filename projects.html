@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyek-proyek Fathul — dari game development hingga web dan eksperimen digital lainnya.">
-    <meta name="keywords" content="Portfolio, Proyek, Game Dev, Web Dev, Fathul">
+    <meta name="description" content="Fathul's projects — from data analysis to web and other digital experiments.">
+    <meta name="keywords" content="Portfolio, Projects, Data Analyst, Web Dev, Fathul">
     <meta name="author" content="Fathul">
-    <title>Proyek — Ruang Digital Fathul</title>
+    <title>Ruang Digital Fathul</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -29,44 +29,68 @@
 
     <main>
         <section class="page-header hidden">
-            <span class="badge">Karya & Eksperimen</span>
-            <h1>Semua <span class="highlight">Proyek</span></h1>
-            <p>Berbagai proyek yang mencerminkan proses belajar dan berkarya. Mulai dari yang serius sampai yang sekadar iseng.</p>
+            <span class="badge">Work & Experiments</span>
+            <h1>All <span class="highlight">Projects</span></h1>
+            <p>A range of projects reflecting my learning process and work — from the serious to the just-for-fun.</p>
         </section>
 
         <section class="featured-section hidden">
             <div class="featured-label">
-                <i class="fa-solid fa-star"></i> Proyek Utama
+                <i class="fa-solid fa-star"></i> Main Project
             </div>
             <div class="featured-card">
                 <div class="featured-thumbnail placeholder-thumb-lg">
-                    <i class="fa-solid fa-gamepad"></i>
+                    <img src="assets/jupijupi.png" alt="Preview analisis E-Commerce Sales Dataset" class="project-thumbnail-gif">
                 </div>
                 <div class="featured-body">
                     <div class="project-meta">
-                        <span class="project-tag">Game Dev</span>
-                        <span class="project-tag">Godot</span>
-                        <span class="project-status status-wip">Dalam Pengerjaan</span>
+                        <span class="project-tag">Data Analysis</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-status status-done">Completed</span>
                     </div>
-                    <h2>Teleported</h2>
-                    <p><strong>Teleported</strong> adalah game action-adventure story-driven yang dikembangkan oleh <strong>Nirantara Interactive</strong>. Game ini mengajak pemain menjelajahi dunia misterius dengan sistem pertarungan berbasis emosi, dipadukan dengan eksplorasi, teka-teki, dan narasi yang berfokus pada perjalanan karakter. Saat ini, Teleported masih berada dalam tahap pengembangan, dengan proses yang mencakup perancangan mekanik gameplay, penulisan cerita, pembuatan aset, hingga implementasi sistem menggunakan Godot Engine 3. Proyek ini menjadi langkah awal Nirantara Interactive dalam menghadirkan pengalaman bermain yang memadukan aksi, emosi, dan cerita yang mendalam.</p>
-                    <p>Proyek ini dibangun ulang dari awal setelah akumulasi bug menjadi tidak terkendali. Sistem inti yang sudah selesai meliputi gerakan pemain, death zone, dan scene-switching antar dunia.</p>
+                    <h2>E-Commerce Sales & Profitability Analysis</h2>
+                    <p>Analyzed 9,994 e-commerce transaction records using Python, Pandas, and Jupyter Notebook to evaluate sales performance, profitability, product performance, regional trends, and the impact of discount levels on business outcomes.</p>
+                    <p>The analysis identified key revenue and profit drivers, highlighted underperforming product categories, and revealed a strong relationship between higher discount levels and negative profitability. The project demonstrates an end-to-end data analysis workflow, from data cleaning and feature engineering to exploratory analysis, visualization, and business insight generation.</p>
+                    
                     <div class="featured-tech">
-                        <span class="tech-chip"><i class="fa-solid fa-code"></i> GDScript</span>
-                        <span class="tech-chip"><i class="fa-solid fa-cube"></i> Godot 3</span>
-                        <span class="tech-chip"><i class="fa-solid fa-person-running"></i> 2D Platformer</span>
+                        <span class="tech-chip"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tech-chip"><i class="fa-solid fa-table"></i> Pandas</span>
+                        <span class="tech-chip"><i class="fa-solid fa-chart-simple"></i> NumPy</span>
+                        <span class="tech-chip"><i class="fa-solid fa-chart-line"></i> Matplotlib</span>
+                        <span class="tech-chip"><i class="fa-solid fa-chart-bar"></i> Jupyter Notebook</span>
+                        <span class="tech-chip"><i class="fa-solid fa-code-branch"></i> Git</span>
+                        <span class="tech-chip"><i class="fa-brands fa-github"></i> GitHub</span>
                     </div>
                     <div class="featured-actions">
-                        <a href="#" class="btn-primary"><i class="fa-brands fa-github"></i> Lihat di GitHub</a>
-                        <a href="#" class="btn-secondary"><i class="fa-solid fa-play"></i> Demo</a>
+                        <a href="https://github.com/MinervaVermillion/ecommerce-sales-analysis" class="btn-primary" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                        <a href="https://github.com/MinervaVermillion/ecommerce-sales-analysis/blob/main/notebooks/ecommerce_analysis_cleaned.ipynb" class="btn-secondary" target="_blank"><i class="fa-solid fa-chart-simple"></i> View Analysis</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="other-projects hidden">
-            <h2 class="section-title">Proyek Lainnya</h2>
+            <h2 class="section-title">Other Projects</h2>
             <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-top">
+                        <div class="project-thumbnail placeholder-thumb">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Game Dev</span>
+                            <span class="project-status status-wip">In Progress</span>
+                        </div>
+                        <h3>Teleported</h3>
+                        <p><strong>Teleported</strong> is a story-driven action-adventure game developed by <strong>Nirantara Interactive</strong>, featuring emotion-based combat, exploration, and puzzle mechanics built in Godot Engine 3.</p>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="btn-card">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-card-top">
                         <div class="project-thumbnail placeholder-thumb">
@@ -76,10 +100,10 @@
                     <div class="project-card-body">
                         <div class="project-meta">
                             <span class="project-tag">Web Dev</span>
-                            <span class="project-status status-wip">Dalam Pengerjaan</span>
+                            <span class="project-status status-wip">In Progress</span>
                         </div>
                         <h3>Ruang Digital Fathul</h3>
-                        <p><strong>Ruang Digital Fathul</strong> adalah ruang digital yang mendokumentasikan proyek, eksperimen, dan karya kreatif di dunia teknologi.</p>
+                        <p><strong>Ruang Digital Fathul</strong> is a digital space documenting my projects, experiments, and creative work in tech.</p>
                     </div>
                     <div class="project-card-footer">
                         <a href="https://github.com/MinervaVermillion/RuangDigitalFathul" class="btn-card">GitHub <i class="fa-solid fa-arrow-right"></i></a>
@@ -99,7 +123,7 @@
                             <span class="project-tag">Pandas</span>
                             <span class="project-tag">Matplotlib</span>
                             <span class="project-tag">Google Sheets</span>
-                            <span class="project-status status-done">Selesai</span>
+                            <span class="project-status status-done">Completed</span>
                         </div>
                         <h3>Steam Insights</h3>
                         <p><strong>Steam Insights</strong> adalah eksplorasi data dari dataset publik Steam Games (Kaggle), dianalisis dua tahap: pertama di Google Sheets menggunakan fungsi spreadsheet, lalu direplikasi di Python dengan Pandas untuk menemukan pola dan insight dari ribuan game di Steam.</p>
@@ -117,14 +141,14 @@
                     </div>
                     <div class="project-card-body">
                         <div class="project-meta">
-                            <span class="project-tag">Segera Hadir</span>
-                            <span class="project-status status-idea">Ide</span>
+                            <span class="project-tag">Coming Soon</span>
+                            <span class="project-status status-idea">Idea</span>
                         </div>
-                        <h3>Proyek Berikutnya</h3>
-                        <p>Ide berikutnya sedang dibangun. Detail akan segera diumumkan.</p>
+                        <h3>Next Project</h3>
+                        <p>The next idea is in the works. Details coming soon.</p>
                     </div>
                     <div class="project-card-footer">
-                        <a href="#" class="btn-card">Segera Hadir <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-card">Coming Soon <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     
                 </div>

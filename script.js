@@ -148,7 +148,7 @@ const observer = new IntersectionObserver(function(entries) {
     rootMargin: "0px 0px -10% 0px"
 });
 
-const hiddenElements = document.querySelectorAll('.about-section.hidden, .projects-section.hidden, .contact-section.hidden, .page-header.hidden, .featured-section.hidden, .other-projects.hidden, .contact-page-section.hidden, .certificates-section.hidden, .credentials-page-section.hidden');
+const hiddenElements = document.querySelectorAll('.about-section.hidden, .skills-section.hidden, .projects-section.hidden, .contact-section.hidden, .page-header.hidden, .featured-section.hidden, .other-projects.hidden, .contact-page-section.hidden, .certificates-section.hidden, .credentials-page-section.hidden');
 hiddenElements.forEach(function(el) {
     observer.observe(el);
 });
