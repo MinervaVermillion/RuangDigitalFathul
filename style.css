@@ -1677,6 +1677,10 @@ body.dark .drive-banner-text p {
     background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
+.social-icon-wrap.linkedin {
+    background: #0077b5;
+}
+
 .social-info {
     flex: 1;
     display: flex;
