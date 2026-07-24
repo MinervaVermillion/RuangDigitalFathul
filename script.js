@@ -111,30 +111,36 @@ if (certSlider && certPrevBtn && certNextBtn) {
             certSlider.scrollBy({ left: cardStep, behavior: 'smooth' });
         });
 
-        const certTrack = document.getElementById('cert-slider-track');
-        const certThumb = document.getElementById('cert-slider-thumb');
+        const certDotsWrap = document.getElementById('cert-slider-dots');
+        const cardCount = originalCards.length;
+        let certDots = [];
 
-        function updateThumb() {
-            if (!certTrack || !certThumb || setWidth === 0) return;
-            const trackWidth = certTrack.clientWidth;
-            const visibleRatio = Math.min(certSlider.clientWidth / setWidth, 1);
-            const thumbWidth = Math.max(visibleRatio * trackWidth, 24);
-            const positionInSet = ((certSlider.scrollLeft % setWidth) + setWidth) % setWidth;
-            const scrollRatio = positionInSet / setWidth;
-            const maxThumbLeft = trackWidth - thumbWidth;
+        if (certDotsWrap) {
+            for (let i = 0; i < cardCount; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'cert-slider-dot';
+                certDotsWrap.appendChild(dot);
+                certDots.push(dot);
+            }
+        }
 
-            certThumb.style.width = thumbWidth + 'px';
-            certThumb.style.transform = `translateX(${scrollRatio * maxThumbLeft}px)`;
+        function updateDots() {
+            if (!certDots.length || cardStep === 0) return;
+            const rawIndex = Math.round(certSlider.scrollLeft / cardStep);
+            const activeIndex = ((rawIndex % cardCount) + cardCount) % cardCount;
+            certDots.forEach(function(dot, i) {
+                dot.classList.toggle('active', i === activeIndex);
+            });
         }
 
         certSlider.addEventListener('scroll', function() {
-            updateThumb();
+            updateDots();
             if (isCorrecting) return;
             clearTimeout(correctionTimeout);
             correctionTimeout = setTimeout(correctLoopPosition, 120);
         });
 
-        window.addEventListener('load', updateThumb);
+        window.addEventListener('load', updateDots);
 
         window.addEventListener('resize', function() {
             const ratio = setWidth ? (certSlider.scrollLeft - setWidth) / cardStep : 0;
