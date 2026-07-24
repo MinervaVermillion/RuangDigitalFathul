@@ -1345,37 +1345,38 @@ body.dark .cert-slider-nav:hover {
     display: none;
 }
 
-.cert-slider-track {
+.cert-slider-dots {
     display: none;
 }
 
 @media (hover: none) {
-    .cert-slider-track {
-        display: block;
-        position: relative;
-        height: 4px;
-        margin: 4px 16px 0 16px;
-        border-radius: 2px;
+    .cert-slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+    }
+
+    .cert-slider-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
         background: #c7cde0;
-        overflow: hidden;
+        transition: background-color .3s ease, width .3s ease;
     }
 
-    .cert-slider-thumb {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 30%;
-        border-radius: 2px;
+    .cert-slider-dot.active {
+        width: 18px;
+        border-radius: 3px;
         background: #4b5563;
-        transition: transform .1s linear;
     }
 
-    body.dark .cert-slider-track {
+    body.dark .cert-slider-dot {
         background: #292e40;
     }
 
-    body.dark .cert-slider-thumb {
+    body.dark .cert-slider-dot.active {
         background: #d1d9f0;
     }
 }
