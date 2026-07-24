@@ -111,11 +111,30 @@ if (certSlider && certPrevBtn && certNextBtn) {
             certSlider.scrollBy({ left: cardStep, behavior: 'smooth' });
         });
 
+        const certTrack = document.getElementById('cert-slider-track');
+        const certThumb = document.getElementById('cert-slider-thumb');
+
+        function updateThumb() {
+            if (!certTrack || !certThumb || setWidth === 0) return;
+            const trackWidth = certTrack.clientWidth;
+            const visibleRatio = Math.min(certSlider.clientWidth / setWidth, 1);
+            const thumbWidth = Math.max(visibleRatio * trackWidth, 24);
+            const positionInSet = ((certSlider.scrollLeft % setWidth) + setWidth) % setWidth;
+            const scrollRatio = positionInSet / setWidth;
+            const maxThumbLeft = trackWidth - thumbWidth;
+
+            certThumb.style.width = thumbWidth + 'px';
+            certThumb.style.transform = `translateX(${scrollRatio * maxThumbLeft}px)`;
+        }
+
         certSlider.addEventListener('scroll', function() {
+            updateThumb();
             if (isCorrecting) return;
             clearTimeout(correctionTimeout);
             correctionTimeout = setTimeout(correctLoopPosition, 120);
         });
+
+        window.addEventListener('load', updateThumb);
 
         window.addEventListener('resize', function() {
             const ratio = setWidth ? (certSlider.scrollLeft - setWidth) / cardStep : 0;

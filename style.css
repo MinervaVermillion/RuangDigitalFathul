@@ -1289,24 +1289,46 @@ body.dark .cert-slider-nav:hover {
 }
 
 @media (hover: none) {
-    .cert-slider-nav,
-    .cert-slider-fade {
+    .cert-slider-nav {
         display: none;
     }
 
     .cert-slider-wrap {
         padding: 0;
+    }
+
+    .cert-slider-fade {
+        width: 28px;
+    }
+
+    .cert-slider-fade.left {
+        left: 0;
+    }
+
+    .cert-slider-fade.right {
+        right: 0;
     }
 }
 
 @media (max-width: 680px) {
-    .cert-slider-nav,
-    .cert-slider-fade {
+    .cert-slider-nav {
         display: none;
     }
 
     .cert-slider-wrap {
         padding: 0;
+    }
+
+    .cert-slider-fade {
+        width: 28px;
+    }
+
+    .cert-slider-fade.left {
+        left: 0;
+    }
+
+    .cert-slider-fade.right {
+        right: 0;
     }
 }
 
@@ -1321,6 +1343,41 @@ body.dark .cert-slider-nav:hover {
 
 .cert-slider::-webkit-scrollbar {
     display: none;
+}
+
+.cert-slider-track {
+    display: none;
+}
+
+@media (hover: none) {
+    .cert-slider-track {
+        display: block;
+        position: relative;
+        height: 4px;
+        margin: 4px 16px 0 16px;
+        border-radius: 2px;
+        background: #c7cde0;
+        overflow: hidden;
+    }
+
+    .cert-slider-thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 30%;
+        border-radius: 2px;
+        background: #4b5563;
+        transition: transform .1s linear;
+    }
+
+    body.dark .cert-slider-track {
+        background: #292e40;
+    }
+
+    body.dark .cert-slider-thumb {
+        background: #d1d9f0;
+    }
 }
 
 .cert-card {
